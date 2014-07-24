@@ -1,0 +1,38 @@
+
+<h1>Welcome to the Data Processor!</h1>
+
+<div class="caption">Inventory</div>
+<div id="table">
+  <div class="header-row row">
+    <span class="cell primary">Title</span>
+    <span class="cell">Author</span>
+    <span class="cell">Description</span>
+    <span class="cell">Edition</span>
+    <span class="cell">Year</span>
+    <span class="cell">Price</span>
+  </div>
+  <% @books.each do |book| %>
+
+    <div class="row">
+      <input type="radio" name="expand">
+    <span class="cell primary" data-label="Vehicle"><%= book.title %>
+</span>
+      <span class="cell" data-label="Exterior"><%= book.author %></span>
+      <span class="cell" data-label="Interior"><%= book.description %></span>
+      <span class="cell" data-label="Engine"><%= book.edition %></span>
+      <span class="cell" data-label="Trans"><%= book.year %></span>
+      <span class="cell" data-label="Trans"><%= book.price %></span>
+
+    </div>
+  <% end %>
+
+</div>
+
+
+
+
+
+
+
+
+<%#= controller.fetch_xlsx_data %>

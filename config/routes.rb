@@ -1,8 +1,7 @@
 Rails.application.routes.draw do
+  root "books#index"
 
-  resources :xlsxes do
-    collection { post :import }
-  end
+  resources :books
   
- root "welcome#index"
+  post "books/fetch_xlsx_data" => "books#fetch_xlsx_data", :as => "book_fetch_xlsx_data"
 end
