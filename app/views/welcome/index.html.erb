@@ -1,1 +1,6 @@
 <h1>Welcome to the Data Processor!</h1>
+
+<%= form_tag import_xlsxes_path, multipart: true do %>
+  <%= file_field_tag :file %>
+  <%= submit_tag "click here" %>
+<% end %>
