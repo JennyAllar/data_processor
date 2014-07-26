@@ -7,11 +7,11 @@
 <div class="caption">Inventory</div>
 <div id="table">
   <div class="header-row row">
-    <span class="cell primary"><%= link_to "Title", :sort => "title" %></span>
-    <span class="cell"><%= link_to "Author", :sort => "author" %></span>
-    <span class="cell"><%= link_to "Description", :sort => "description" %></span>
-    <span class="cell"><%= link_to "Edition", :sort => "edition" %></span>
-    <span class="cell"><%= link_to "Year", :sort => "year" %></span>
+    <span class="cell primary"><%= sortable "title", "Title" %></span>
+    <span class="cell"><%= sortable "author", "Author" %></span>
+    <span class="cell"><%= sortable "description", "Description" %></span>
+    <span class="cell"><%= sortable "edition", "Edition" %></span>
+    <span class="cell"><%= sortable "year", "Year" %></span>
     <span class="cell"><%= sortable "price", "Price" %></span>
   </div>
   <% @books.each do |book| %>
