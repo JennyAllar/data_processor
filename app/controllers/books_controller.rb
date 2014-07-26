@@ -2,7 +2,7 @@ require 'roo'
 
 class BooksController < ApplicationController
   def index
-    @books = Book.all
+    @books = Book.order(params[:sort])
   end
 
   def create
