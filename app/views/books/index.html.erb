@@ -12,7 +12,7 @@
     <span class="cell"><%= link_to "Description", :sort => "description" %></span>
     <span class="cell"><%= link_to "Edition", :sort => "edition" %></span>
     <span class="cell"><%= link_to "Year", :sort => "year" %></span>
-    <span class="cell"><%= link_to "Price", :sort => "price" %></span>
+    <span class="cell"><%= sortable "price", "Price" %></span>
   </div>
   <% @books.each do |book| %>
 
