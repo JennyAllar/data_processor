@@ -3,39 +3,16 @@
 
 <%= button_to "Click Here", book_fetch_xlsx_data_path %>
 
-
-<div class="caption">Inventory</div>
-<table class="pretty">
-  <tr>
-    <th><%= link_to "Title", :sort => "title" %></th>
-    <th><%= link_to "Author", :sort => "author" %></th>
-    <th><%= link_to "Description", :sort => "description" %></th>
-    <th><%= link_to "Edition", :sort => "edition" %></th>
-    <th><%= link_to "Year", :sort => "year" %></th>
-    <th><%= link_to "Price", :sort => "price" %></th>
-  </tr>
-  <% for book in @books %>
-    <tr>
-      <td><%= book.title %></td>
-      <td><%= book.author %></td>
-      <td><%= book.description %></td>
-      <td><%= book.edition %></td>
-      <td><%= book.year %></td>
-      <td><%= book.price %></td>
-    </tr>
-  <% end %>
-</table>
-
 <br><br><br>
 <div class="caption">Inventory</div>
 <div id="table">
   <div class="header-row row">
-    <span class="cell primary">Title</span>
-    <span class="cell">Author</span>
-    <span class="cell">Description</span>
-    <span class="cell">Edition</span>
-    <span class="cell">Year</span>
-    <span class="cell">Price</span>
+    <span class="cell primary"><%= link_to "Title", :sort => "title" %></span>
+    <span class="cell"><%= link_to "Author", :sort => "author" %></span>
+    <span class="cell"><%= link_to "Description", :sort => "description" %></span>
+    <span class="cell"><%= link_to "Edition", :sort => "edition" %></span>
+    <span class="cell"><%= link_to "Year", :sort => "year" %></span>
+    <span class="cell"><%= link_to "Price", :sort => "price" %></span>
   </div>
   <% @books.each do |book| %>
 
