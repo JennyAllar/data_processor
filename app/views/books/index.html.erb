@@ -2,6 +2,11 @@
 <h1>Welcome to the Data Processor!</h1>
 
 <%= button_to "Click Here", book_fetch_xlsx_data_path %>
+<br><br><br>
+<%= form_tag import_books_path, multipart: true do %>
+  <%= file_field_tag :file %>
+  <%= submit_tag "Import" %>
+<% end %>
 
 <br><br><br>
 <div class="caption">Inventory</div>
@@ -11,8 +16,8 @@
     <span class="cell"><%= sortable "author", "Author" %></span>
     <span class="cell"><%= sortable "description", "Description" %></span>
     <span class="cell"><%= sortable "edition", "Edition" %></span>
-    <span class="cell"><%= sortable "year", "Year" %></span>
-    <span class="cell"><%= sortable "price", "Price" %></span>
+    <span class="cell"><%= sortable "year", "Copyright Year" %></span>
+    <span class="cell"><%= sortable "price", "List Price" %></span>
   </div>
   <% @books.each do |book| %>
 
